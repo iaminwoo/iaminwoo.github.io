@@ -1,6 +1,6 @@
 +++
 date = '2026-03-31T20:35:36+09:00'
-draft = true
+draft = false
 title = '개인 기술 블로그 시작!'
 summary = '그동안 블로그를 하지 않았던 이유, Hugo 트러블슈팅 및 느낀점'
 tags = ['hugo', 'blowfish', 'github pages']
