@@ -12,7 +12,7 @@ title = "황인우 딥다이브 블로그"        # 블로그 제목
 
   [params.author]
     name = "황인우" # 본인 이름
-    # image = "img/author.jpg" # 프로필 사진 경로
+    # image = "img/author.jpg" # 프로필 사진 경로 (일단 배포 먼저 확인)
     headline = "집착하는 개발자 황인우입니다"
     bio = "여기에 본인에 대한 자세한 소개를 적어보세요. 좋아하는 기술이나 취미 등 무엇이든 좋습니다."
     links = [
