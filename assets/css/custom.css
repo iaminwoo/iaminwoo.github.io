@@ -1,0 +1,47 @@
+body,
+input,
+button,
+select,
+textarea {
+  font-family:
+    "Pretendard Variable",
+    Pretendard,
+    -apple-system,
+    BlinkMacSystemFont,
+    system-ui,
+    Roboto,
+    "Helvetica Neue",
+    "Segoe UI",
+    "Apple SD Gothic Neo",
+    "Noto Sans KR",
+    "Malgun Gothic",
+    sans-serif !important;
+}
+
+/* 글 전체와 문단(p), 목록(li)까지 모두 지정 */
+body,
+p,
+li,
+article {
+  font-family: "Pretendard Variable", Pretendard, sans-serif !important;
+
+  /* 줄 간격: 기본보다 훨씬 시원하게 (1.8 ~ 2.0 추천) */
+  line-height: 2 !important;
+
+  /* 자간: 살짝 조여서 글자가 쫀득하게 보이게 함 (-0.01em ~ -0.03em) */
+  letter-spacing: -0.02em !important;
+
+  /* 가독성을 위해 문단 사이 간격을 살짝 벌림 */
+  margin-bottom: 1.1rem;
+}
+
+/* 제목들도 자간을 조여주면 훨씬 세련되어 보입니다 */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  letter-spacing: -0.03em !important;
+  line-height: 1.4 !important;
+}

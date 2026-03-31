@@ -21,6 +21,7 @@ buymeacoffee = { }
 verification = { }
 rssnext = { }
 advertisement = { }
+customCSS = ["css/custom.css"]
 
 [header]
 layout = "basic"

@@ -2,7 +2,7 @@ disabled = false
 languageCode = "ko-kr"     # 한국 코드로 변경
 languageName = "한국어"      # 사이트상에 표시될 언어 이름
 weight = 1
-title = "황인우 딥다이브 블로그"        # 블로그 제목
+title = "Deep Dive Blog"        # 블로그 제목
 
 [params]
   displayName = "KO"
@@ -14,7 +14,7 @@ title = "황인우 딥다이브 블로그"        # 블로그 제목
     name = "황인우" # 본인 이름
     image = "img/author.jpg" # 프로필 사진 경로
     headline = "집착하는 개발자 황인우입니다"
-    bio = "여기에 본인에 대한 자세한 소개를 적어보세요. 좋아하는 기술이나 취미 등 무엇이든 좋습니다."
+    bio = "안녕하세요. 문제 해결에 진심인 백엔드 개발자 황인우입니다."
     links = [
       { github = "https://github.com/iaminwoo" }
     ]

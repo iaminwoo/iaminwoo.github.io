@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Authors on 황인우 딥다이브 블로그</title>
+    <title>Authors on Deep Dive Blog</title>
     <link>http://localhost:1313/authors/</link>
-    <description>Recent content in Authors on 황인우 딥다이브 블로그</description>
+    <description>Recent content in Authors on Deep Dive Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-kr</language>
     <copyright>© 2026 황인우</copyright>

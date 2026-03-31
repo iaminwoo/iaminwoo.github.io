@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Blowfish on 황인우 딥다이브 블로그</title>
+    <title>Blowfish on Deep Dive Blog</title>
     <link>http://localhost:1313/tags/blowfish/</link>
-    <description>Recent content in Blowfish on 황인우 딥다이브 블로그</description>
+    <description>Recent content in Blowfish on Deep Dive Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-kr</language>
     <copyright>© 2026 황인우</copyright>
-    <lastBuildDate>Tue, 31 Mar 2026 16:09:31 +0900</lastBuildDate><atom:link href="http://localhost:1313/tags/blowfish/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 31 Mar 2026 20:35:36 +0900</lastBuildDate><atom:link href="http://localhost:1313/tags/blowfish/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>Test Post</title>
-      <link>http://localhost:1313/posts/test-post/</link>
-      <pubDate>Tue, 31 Mar 2026 16:09:31 +0900</pubDate>
+      <title>개인 기술 블로그 시작!</title>
+      <link>http://localhost:1313/posts/2026-03-31-2035/</link>
+      <pubDate>Tue, 31 Mar 2026 20:35:36 +0900</pubDate>
       
-      <guid>http://localhost:1313/posts/test-post/</guid>
-      <description>게시물 테스트</description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/test-post/featured.png" />
+      <guid>http://localhost:1313/posts/2026-03-31-2035/</guid>
+      <description>그동안 블로그를 하지 않았던 이유, Hugo 트러블슈팅 및 느낀점</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/2026-03-31-2035/featured.png" />
     </item>
     
   </channel>
