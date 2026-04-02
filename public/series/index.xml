@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Series on Deep Dive Blog</title>
+    <title>Series on Deep Dive Blog : Reinventing The Wheel</title>
     <link>http://localhost:1313/series/</link>
-    <description>Recent content in Series on Deep Dive Blog</description>
+    <description>Recent content in Series on Deep Dive Blog : Reinventing The Wheel</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-kr</language>
     <copyright>© 2026 황인우</copyright>

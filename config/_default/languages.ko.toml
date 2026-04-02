@@ -2,7 +2,7 @@ disabled = false
 languageCode = "ko-kr"     # 한국 코드로 변경
 languageName = "한국어"      # 사이트상에 표시될 언어 이름
 weight = 1
-title = "Deep Dive Blog"        # 블로그 제목
+title = "Deep Dive Blog : Reinventing The Wheel"        # 블로그 제목
 
 [params]
   displayName = "KO"

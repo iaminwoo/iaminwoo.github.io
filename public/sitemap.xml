@@ -3,19 +3,31 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
   <url>
-    <loc>http://localhost:1313/</loc>
-    <lastmod>2026-03-31T20:35:36+09:00</lastmod>
+    <loc>http://localhost:1313/posts/2026-04-02-0932/</loc>
+    <lastmod>2026-04-02T09:32:03+09:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://localhost:1313/posts/2026-03-31-2035/</loc>
-    <lastmod>2026-03-31T20:35:36+09:00</lastmod>
+    <loc>http://localhost:1313/</loc>
+    <lastmod>2026-04-02T09:32:03+09:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>http://localhost:1313/posts/</loc>
+    <lastmod>2026-04-02T09:32:03+09:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://localhost:1313/posts/2026-04-01-0914/</loc>
+    <lastmod>2026-04-01T09:14:33+09:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://localhost:1313/posts/2026-03-31-2035/</loc>
     <lastmod>2026-03-31T20:35:36+09:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>

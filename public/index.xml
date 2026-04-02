@@ -1,13 +1,33 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Deep Dive Blog</title>
+    <title>Deep Dive Blog : Reinventing The Wheel</title>
     <link>http://localhost:1313/</link>
-    <description>Recent content on Deep Dive Blog</description>
+    <description>Recent content on Deep Dive Blog : Reinventing The Wheel</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-kr</language>
     <copyright>© 2026 황인우</copyright>
-    <lastBuildDate>Tue, 31 Mar 2026 20:35:36 +0900</lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 02 Apr 2026 09:32:03 +0900</lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Java ArrayList Deep Dive</title>
+      <link>http://localhost:1313/posts/2026-04-02-0932/</link>
+      <pubDate>Thu, 02 Apr 2026 09:32:03 +0900</pubDate>
+      
+      <guid>http://localhost:1313/posts/2026-04-02-0932/</guid>
+      <description>자바의 ArrayList 의 크기는 어떻게 관리되는가? 성능과 메모리 효율의 균형을 잡는 내부 크기 관리 메커니즘 분석</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/2026-04-02-0932/featured.png" />
+    </item>
+    
+    <item>
+      <title>자바 핵심 자료구조 draft</title>
+      <link>http://localhost:1313/posts/2026-04-01-0914/</link>
+      <pubDate>Wed, 01 Apr 2026 09:14:33 +0900</pubDate>
+      
+      <guid>http://localhost:1313/posts/2026-04-01-0914/</guid>
+      <description>자바의 대표적인 자료구조 3종의 내부 동작 원리를 분석, 최악 및 평균 시간 복잡도와 효율적인 구현 전략을 정리</description>
+      
+    </item>
     
     <item>
       <title>개인 기술 블로그 시작!</title>
