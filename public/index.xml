@@ -7,7 +7,17 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-kr</language>
     <copyright>© 2026 황인우</copyright>
-    <lastBuildDate>Thu, 02 Apr 2026 09:32:03 +0900</lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 02 Apr 2026 20:30:01 +0900</lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Java HashMap Deep Dive</title>
+      <link>http://localhost:1313/posts/2026-04-02-2030/</link>
+      <pubDate>Thu, 02 Apr 2026 20:30:01 +0900</pubDate>
+      
+      <guid>http://localhost:1313/posts/2026-04-02-2030/</guid>
+      <description>HashMap 은 어떻게 객체를 인덱스로 바꾸는가? 확장과 이상 감지 매커니즘 분석과 해시의 중요성</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/2026-04-02-2030/featured.png" />
+    </item>
     
     <item>
       <title>Java ArrayList Deep Dive</title>

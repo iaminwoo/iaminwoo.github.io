@@ -231,7 +231,7 @@
     "keywords": ["자료구조","Java"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "1493"
+    "wordCount": "1496"
   }]
   </script>
 
@@ -803,14 +803,14 @@
     class="min-w-[220px] py-2 border-dotted border-s-1 -ms-5 ps-5 dark:border-neutral-600">
     <nav id="TableOfContents">
   <ul>
-    <li><a href="#arraylist-기초--동적-배열-관리">ArrayList 기초 : 동적 배열 관리</a>
+    <li><a href="#1-arraylist-기초--동적-배열-관리">1) ArrayList 기초 : 동적 배열 관리</a>
       <ul>
         <li><a href="#1-동적-배열">1. 동적 배열</a></li>
         <li><a href="#2-동적-배열-확장-방식-두가지--상수-확장-배수-확장">2. 동적 배열 확장 방식 두가지 : 상수 확장, 배수 확장</a></li>
         <li><a href="#3-적절한-확장-배수-찾기--2배와-15배의-차이">3. 적절한 확장 배수 찾기 : 2배와 1.5배의 차이</a></li>
       </ul>
     </li>
-    <li><a href="#arraylist-의-실제-구현">ArrayList 의 실제 구현</a>
+    <li><a href="#2-arraylist-의-실제-구현">2) ArrayList 의 실제 구현</a>
       <ul>
         <li><a href="#1-객체-생성시-동작--메모리를-아끼는-플라이웨이트-전략">1. 객체 생성시 동작 : 메모리를 아끼는 플라이웨이트 전략</a></li>
         <li><a href="#2-요소의-추가와-확장--사용자의-의도를-존중하는-grow-로직">2. 요소의 추가와 확장 : 사용자의 의도를 존중하는 grow() 로직</a></li>
@@ -818,7 +818,7 @@
         <li><a href="#4-데이터의-일관성을-지키는-modcount">4. 데이터의 일관성을 지키는 modCount</a></li>
       </ul>
     </li>
-    <li><a href="#마치며--arraylist-의-시간복잡도와-개발자의-책임감">마치며 : ArrayList 의 시간복잡도와 개발자의 책임감</a>
+    <li><a href="#3-마치며--arraylist-의-시간복잡도와-개발자의-책임감">3) 마치며 : ArrayList 의 시간복잡도와 개발자의 책임감</a>
       <ul>
         <li><a href="#1-각-작업별-시간복잡도">1. 각 작업별 시간복잡도</a></li>
         <li><a href="#2-개발자의-책임감">2. 개발자의 책임감</a></li>
@@ -837,14 +837,14 @@
     class="py-2 border-dotted border-neutral-300 border-s-1 -ms-5 ps-5 dark:border-neutral-600">
     <nav id="TableOfContents">
   <ul>
-    <li><a href="#arraylist-기초--동적-배열-관리">ArrayList 기초 : 동적 배열 관리</a>
+    <li><a href="#1-arraylist-기초--동적-배열-관리">1) ArrayList 기초 : 동적 배열 관리</a>
       <ul>
         <li><a href="#1-동적-배열">1. 동적 배열</a></li>
         <li><a href="#2-동적-배열-확장-방식-두가지--상수-확장-배수-확장">2. 동적 배열 확장 방식 두가지 : 상수 확장, 배수 확장</a></li>
         <li><a href="#3-적절한-확장-배수-찾기--2배와-15배의-차이">3. 적절한 확장 배수 찾기 : 2배와 1.5배의 차이</a></li>
       </ul>
     </li>
-    <li><a href="#arraylist-의-실제-구현">ArrayList 의 실제 구현</a>
+    <li><a href="#2-arraylist-의-실제-구현">2) ArrayList 의 실제 구현</a>
       <ul>
         <li><a href="#1-객체-생성시-동작--메모리를-아끼는-플라이웨이트-전략">1. 객체 생성시 동작 : 메모리를 아끼는 플라이웨이트 전략</a></li>
         <li><a href="#2-요소의-추가와-확장--사용자의-의도를-존중하는-grow-로직">2. 요소의 추가와 확장 : 사용자의 의도를 존중하는 grow() 로직</a></li>
@@ -852,7 +852,7 @@
         <li><a href="#4-데이터의-일관성을-지키는-modcount">4. 데이터의 일관성을 지키는 modCount</a></li>
       </ul>
     </li>
-    <li><a href="#마치며--arraylist-의-시간복잡도와-개발자의-책임감">마치며 : ArrayList 의 시간복잡도와 개발자의 책임감</a>
+    <li><a href="#3-마치며--arraylist-의-시간복잡도와-개발자의-책임감">3) 마치며 : ArrayList 의 시간복잡도와 개발자의 책임감</a>
       <ul>
         <li><a href="#1-각-작업별-시간복잡도">1. 각 작업별 시간복잡도</a></li>
         <li><a href="#2-개발자의-책임감">2. 개발자의 책임감</a></li>
@@ -875,12 +875,12 @@
 
         <div class="article-content max-w-prose mb-20">
           
-<h2 class="relative group">ArrayList 기초 : 동적 배열 관리
-    <div id="arraylist-기초--동적-배열-관리" class="anchor"></div>
+<h2 class="relative group">1) ArrayList 기초 : 동적 배열 관리
+    <div id="1-arraylist-기초--동적-배열-관리" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#arraylist-%ea%b8%b0%ec%b4%88--%eb%8f%99%ec%a0%81-%eb%b0%b0%ec%97%b4-%ea%b4%80%eb%a6%ac" aria-label="앵커">#</a>
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#1-arraylist-%ea%b8%b0%ec%b4%88--%eb%8f%99%ec%a0%81-%eb%b0%b0%ec%97%b4-%ea%b4%80%eb%a6%ac" aria-label="앵커">#</a>
     </span>
     
 </h2>
@@ -1024,12 +1024,12 @@ Java 는 시간, 공간 효율성의 균형을 <strong>1.5배</strong>로 선택
 <blockquote><p>시간 효율성과 공간 효율성의 균형, <strong>Java 의 선택 1.5배</strong></p>
 </blockquote><hr>
 
-<h2 class="relative group">ArrayList 의 실제 구현
-    <div id="arraylist-의-실제-구현" class="anchor"></div>
+<h2 class="relative group">2) ArrayList 의 실제 구현
+    <div id="2-arraylist-의-실제-구현" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#arraylist-%ec%9d%98-%ec%8b%a4%ec%a0%9c-%ea%b5%ac%ed%98%84" aria-label="앵커">#</a>
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#2-arraylist-%ec%9d%98-%ec%8b%a4%ec%a0%9c-%ea%b5%ac%ed%98%84" aria-label="앵커">#</a>
     </span>
     
 </h2>
@@ -1350,12 +1350,12 @@ ArrayList 는 <strong>중간 삽입 (혹은 삭제) 에 상대적으로 취약</
 필요하다면 다른 방법을 사용해야 한다.</p>
 <hr>
 
-<h2 class="relative group">마치며 : ArrayList 의 시간복잡도와 개발자의 책임감
-    <div id="마치며--arraylist-의-시간복잡도와-개발자의-책임감" class="anchor"></div>
+<h2 class="relative group">3) 마치며 : ArrayList 의 시간복잡도와 개발자의 책임감
+    <div id="3-마치며--arraylist-의-시간복잡도와-개발자의-책임감" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%eb%a7%88%ec%b9%98%eb%a9%b0--arraylist-%ec%9d%98-%ec%8b%9c%ea%b0%84%eb%b3%b5%ec%9e%a1%eb%8f%84%ec%99%80-%ea%b0%9c%eb%b0%9c%ec%9e%90%ec%9d%98-%ec%b1%85%ec%9e%84%ea%b0%90" aria-label="앵커">#</a>
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#3-%eb%a7%88%ec%b9%98%eb%a9%b0--arraylist-%ec%9d%98-%ec%8b%9c%ea%b0%84%eb%b3%b5%ec%9e%a1%eb%8f%84%ec%99%80-%ea%b0%9c%eb%b0%9c%ec%9e%90%ec%9d%98-%ec%b1%85%ec%9e%84%ea%b0%90" aria-label="앵커">#</a>
     </span>
     
 </h2>
@@ -1465,6 +1465,19 @@ ArrayList 는 <strong>중간 삽입 (혹은 삭제) 에 상대적으로 취약</
           
         </span>
         <span class="flex flex-col items-end">
+          
+            <a
+              class="flex text-right text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+              href="/posts/2026-04-02-2030/">
+              <span class="leading-6">
+                Java HashMap Deep Dive&ensp;<span class="inline-block rtl:rotate-180">&rarr;</span>
+              </span>
+            </a>
+            
+              <span class="me-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
+                <time datetime="2026-04-02T20:30:01&#43;09:00">2026년 4월 2일</time>
+              </span>
+            
           
         </span>
       </div>
