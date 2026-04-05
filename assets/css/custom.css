@@ -45,3 +45,72 @@ h6 {
   letter-spacing: -0.03em !important;
   line-height: 1.4 !important;
 }
+
+/* 코드 블럭 전체의 글씨 크기 조절 */
+.highlight pre,
+code {
+  font-size: 0.9rem; /* 기본보다 약간 크게 (1.1~1.2rem 추천) */
+  line-height: 1.5; /* 가독성을 위해 줄 간격도 함께 조절하는 것이 좋습니다 */
+}
+
+/* 인라인 코드(문장 중간의 코드) 크기만 별도로 조절하고 싶을 때 */
+p code {
+  font-size: 0.95em;
+}
+
+/* .prose 클래스 내부의 pre 태그 스타일 덮어쓰기 */
+.prose pre {
+  padding-inline-start: 0.3rem !important; /* 왼쪽 여백 축소 (줄 번호와의 간격) */
+  padding-inline-end: 0rem !important; /* 오른쪽 여백 조절 */
+}
+
+/* 일반 본문(.prose) 내의 strong 태그 색상 변경 */
+.prose strong {
+  color: #6b280d !important; /* 원하는 색상 코드로 변경하세요 (예: 파란색) */
+}
+
+/* 다크 모드일 때 굵은 글씨 색상을 다르게 하고 싶다면 */
+.dark .prose strong {
+  color: #ffa07a !important; /* 다크 모드에서는 조금 더 밝은 색 추천 */
+}
+
+.prose h2,
+.prose h3 {
+  position: sticky;
+  top: -0.6rem !important;
+  z-index: 10;
+
+  padding-left: 1.5rem !important;
+  padding-right: 1.5rem !important;
+
+  margin-left: -1.5rem !important;
+  margin-right: -1.5rem !important;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+
+  /* 1. 배경을 그라데이션으로 설정 (가운데는 불투명, 위아래는 투명) */
+  /* 일반 모드 기준 (#ffffff 사용) */
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 1) 15%,
+    rgba(255, 255, 255, 1) 65%,
+    rgba(255, 255, 255, 0) 100%
+  ) !important;
+
+  /* 2. 여백을 충분히 주어 그라데이션 영역 확보 */
+  padding-top: 1.6rem !important;
+  padding-bottom: 2rem !important;
+}
+
+/* 다크 모드 대응 (#18181b 기준 - 본인의 다크모드 배경색에 맞춰 수정) */
+.dark .prose h2,
+.dark .prose h3 {
+  background: linear-gradient(
+    to bottom,
+    rgba(41, 37, 36, 0) 0%,
+    rgba(41, 37, 36, 1) 15%,
+    rgba(41, 37, 36, 1) 65%,
+    rgba(41, 37, 36, 0) 100%
+  ) !important;
+}

@@ -28,7 +28,7 @@
   lineNoStart = 1
   lineNos = true           # 코드 옆에 줄 번호 표시 (원치 않으면 false)
   lineNumbersInTable = true
-  noClasses = true
+  noClasses = false
   style = "github-dark"
   tabWidth = 4
 
