@@ -98,8 +98,8 @@
   <link
     type="text/css"
     rel="stylesheet"
-    href="/css/main.bundle.min.364436c5369c6ebc6332b9ee32f9a088d00a15b32478c1274ac3aa7818c4eb18e45c08532e967ce5b5d37e362c22f25f923060d0ed22ed63406a0afd70448ecd.css"
-    integrity="sha512-NkQ2xTacbrxjMrnuMvmgiNAKFbMkeMEnSsOqeBjE6xjkXAhTLpZ85bXTfjYsIvJfkjBg0O0i7WNAagr9cESOzQ==">
+    href="/css/main.bundle.min.7ca87dd702e5c097b6e58e37eeb533cd6fb24d208acd7d5c13e0a9dcbadc90b1a6a37aec2f341c1bf65f0a4cf4b5edd5f36b238a0a1453060a3c3934db3844b6.css"
+    integrity="sha512-fKh91wLlwJe25Y437rUzzW&#43;yTSCKzX1cE&#43;Cp3LrckLGmo3rsLzQcG/ZfCkz0te3V82sjigoUUwYKPDk02zhEtg==">
 
   
   
@@ -234,6 +234,70 @@
   
 
   
+  
+    <div
+  id="mobile-sticky-progress"
+  style="
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10001;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 15px;
+    overflow: hidden;
+    text-align: center;
+  "
+>
+  <span
+    id="current-section-text"
+    style="
+      font-size: 0.85rem;
+      font-weight: 700;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      display: inline-block;
+      width: 100%;
+    "
+  ></span>
+</div>
+
+<script>
+  (function () {
+    const updateTitle = () => {
+      const toc = document.querySelector("#TableOfContents");
+      const bar = document.getElementById("mobile-sticky-progress");
+      const text = document.getElementById("current-section-text");
+
+      if (!toc || !bar || !text) return;
+
+      const activeLink = toc.querySelector("a.active");
+      
+      const isScrolled = window.scrollY > 700;
+      const isMobile = window.innerWidth < 1025;
+
+      if (activeLink && isScrolled && isMobile) {
+        text.innerText = activeLink.innerText;
+        bar.style.display = "block";
+      } else {
+        bar.style.display = "none";
+      }
+    };
+
+    
+    window.addEventListener("scroll", () => {
+      window.requestAnimationFrame(updateTitle);
+    });
+
+    
+    window.addEventListener("load", updateTitle);
+    window.addEventListener("resize", updateTitle);
+  })();
+</script>
+
   
 
   

@@ -101,8 +101,8 @@
   <link
     type="text/css"
     rel="stylesheet"
-    href="/css/main.bundle.min.396e063a0026840f3cecd0b5bc869e9a3bb8ec32e2e0b244285ac1fd12e210ef566bfd819805ebb162014d5f201fc93ca0d8b978edcd45510cd03231e8622a7b.css"
-    integrity="sha512-OW4GOgAmhA887NC1vIaemju47DLi4LJEKFrB/RLiEO9Wa/2BmAXrsWIBTV8gH8k8oNi5eO3NRVEM0DIx6GIqew==">
+    href="/css/main.bundle.min.723d440dbb4e34e932324574f8c7af25ad3904cb2e39fc4fc708aa24425ce43859693989ff4c63b4f7e801a8bb3f8e9dd1ecd8ebf92c0cb328a59a24e7c85133.css"
+    integrity="sha512-cj1EDbtONOkyMkV0&#43;MevJa05BMsuOfxPxwiqJEJc5DhZaTmJ/0xjtPfoAai7P46d0ezY6/ksDLMopZok58hRMw==">
 
   
   
@@ -237,6 +237,67 @@
   
 
   
+  
+    <div
+  id="mobile-sticky-progress"
+  style="
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    background: #1c1917;
+    color: white;
+    padding: 8px;
+    text-align: center;
+    border-bottom: 1px solid #333;
+  "
+>
+  <span
+    id="current-section-text"
+    style="font-size: 0.85rem; font-weight: bold; color: white !important"
+  ></span>
+</div>
+
+<script>
+  (function () {
+    console.log("🚀 최종 모바일 헤더 로직 가동"); 
+
+    const updateTitle = () => {
+      const toc = document.querySelector("#TableOfContents");
+      const bar = document.getElementById("mobile-sticky-progress");
+      const text = document.getElementById("current-section-text");
+
+      if (!toc || !bar || !text) return;
+
+      const activeLink = toc.querySelector("a.active");
+      
+      const isScrolled = window.scrollY > 500;
+      const isMobile = window.innerWidth < 1025;
+
+      if (activeLink && isScrolled && isMobile) {
+        text.innerText = activeLink.innerText;
+        bar.style.display = "block";
+      } else {
+        bar.style.display = "none";
+      }
+    };
+
+    
+    window.addEventListener("scroll", () => {
+      window.requestAnimationFrame(updateTitle);
+    });
+
+    
+    window.addEventListener("load", updateTitle);
+    window.addEventListener("resize", updateTitle);
+
+    
+    setInterval(updateTitle, 1000);
+  })();
+</script>
+
   
 
   
@@ -651,14 +712,6 @@
           
         </h2>
       </a>
-      
-        <div class="ms-2"><span class="flex cursor-pointer">
-  <span
-    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
-    초안
-  </span>
-</span>
-</div>
       
       
     </header>

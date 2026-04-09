@@ -74,43 +74,26 @@ p code {
   color: #ffa07a !important; /* 다크 모드에서는 조금 더 밝은 색 추천 */
 }
 
-.prose h2,
-.prose h3 {
-  position: sticky;
-  top: -0.6rem !important;
-  z-index: 10;
-
-  padding-left: 1.5rem !important;
-  padding-right: 1.5rem !important;
-
-  margin-left: -1.5rem !important;
-  margin-right: -1.5rem !important;
-  margin-top: 0 !important;
-  margin-bottom: 0 !important;
-
-  /* 1. 배경을 그라데이션으로 설정 (가운데는 불투명, 위아래는 투명) */
-  /* 일반 모드 기준 (#ffffff 사용) */
-  background: linear-gradient(
-    to bottom,
-    rgba(255, 255, 255, 0) 0%,
-    rgba(255, 255, 255, 1) 15%,
-    rgba(255, 255, 255, 1) 65%,
-    rgba(255, 255, 255, 0) 100%
-  ) !important;
-
-  /* 2. 여백을 충분히 주어 그라데이션 영역 확보 */
-  padding-top: 1.6rem !important;
-  padding-bottom: 2rem !important;
+/* 라이트 모드 */
+#mobile-sticky-progress {
+  background-color: rgba(255, 255, 255, 0.7) !important;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2) !important;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05) !important;
 }
 
-/* 다크 모드 대응 (#18181b 기준 - 본인의 다크모드 배경색에 맞춰 수정) */
-.dark .prose h2,
-.dark .prose h3 {
-  background: linear-gradient(
-    to bottom,
-    rgba(41, 37, 36, 0) 0%,
-    rgba(41, 37, 36, 1) 15%,
-    rgba(41, 37, 36, 1) 65%,
-    rgba(41, 37, 36, 0) 100%
-  ) !important;
+/* 다크 모드 */
+.dark #mobile-sticky-progress {
+  background-color: rgba(28, 25, 23, 0.7) !important;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+#current-section-text {
+  color: #000000 !important;
+}
+
+.dark #current-section-text {
+  color: #ffffff !important;
 }

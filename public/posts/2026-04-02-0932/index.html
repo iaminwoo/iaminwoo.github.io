@@ -105,8 +105,8 @@
   <link
     type="text/css"
     rel="stylesheet"
-    href="/css/main.bundle.min.364436c5369c6ebc6332b9ee32f9a088d00a15b32478c1274ac3aa7818c4eb18e45c08532e967ce5b5d37e362c22f25f923060d0ed22ed63406a0afd70448ecd.css"
-    integrity="sha512-NkQ2xTacbrxjMrnuMvmgiNAKFbMkeMEnSsOqeBjE6xjkXAhTLpZ85bXTfjYsIvJfkjBg0O0i7WNAagr9cESOzQ==">
+    href="/css/main.bundle.min.7ca87dd702e5c097b6e58e37eeb533cd6fb24d208acd7d5c13e0a9dcbadc90b1a6a37aec2f341c1bf65f0a4cf4b5edd5f36b238a0a1453060a3c3934db3844b6.css"
+    integrity="sha512-fKh91wLlwJe25Y437rUzzW&#43;yTSCKzX1cE&#43;Cp3LrckLGmo3rsLzQcG/ZfCkz0te3V82sjigoUUwYKPDk02zhEtg==">
 
   
   
@@ -241,6 +241,70 @@
   
 
   
+  
+    <div
+  id="mobile-sticky-progress"
+  style="
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10001;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 15px;
+    overflow: hidden;
+    text-align: center;
+  "
+>
+  <span
+    id="current-section-text"
+    style="
+      font-size: 0.85rem;
+      font-weight: 700;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      display: inline-block;
+      width: 100%;
+    "
+  ></span>
+</div>
+
+<script>
+  (function () {
+    const updateTitle = () => {
+      const toc = document.querySelector("#TableOfContents");
+      const bar = document.getElementById("mobile-sticky-progress");
+      const text = document.getElementById("current-section-text");
+
+      if (!toc || !bar || !text) return;
+
+      const activeLink = toc.querySelector("a.active");
+      
+      const isScrolled = window.scrollY > 700;
+      const isMobile = window.innerWidth < 1025;
+
+      if (activeLink && isScrolled && isMobile) {
+        text.innerText = activeLink.innerText;
+        bar.style.display = "block";
+      } else {
+        bar.style.display = "none";
+      }
+    };
+
+    
+    window.addEventListener("scroll", () => {
+      window.requestAnimationFrame(updateTitle);
+    });
+
+    
+    window.addEventListener("load", updateTitle);
+    window.addEventListener("resize", updateTitle);
+  })();
+</script>
+
   
 
   
@@ -863,6 +927,106 @@
   </div>
 </details>
 
+
+<script>
+  (function () {
+    'use strict'
+
+    const SCROLL_OFFSET_RATIO = 0.33
+    const TOC_SELECTOR = '#TableOfContents'
+    const ANCHOR_SELECTOR = '.anchor'
+    const TOC_LINK_SELECTOR = 'a[href^="#"]'
+    const NESTED_LIST_SELECTOR = 'li ul'
+    const ACTIVE_CLASS = 'active'
+    let isJumpingToAnchor = false
+
+    function getActiveAnchorId(anchors, offsetRatio) {
+      const threshold = window.scrollY + window.innerHeight * offsetRatio
+      const tocLinks = [...document.querySelectorAll('#TableOfContents a[href^="#"]')]
+      const tocIds = new Set(tocLinks.map(link => link.getAttribute('href').substring(1)))
+
+      if (isJumpingToAnchor) {
+        for (let i = 0; i < anchors.length; i++) {
+          const anchor = anchors[i]
+          if (!tocIds.has(anchor.id)) continue
+          const top = anchor.getBoundingClientRect().top + window.scrollY
+          if (Math.abs(window.scrollY - top) < 100) {
+            return anchor.id
+          }
+        }
+      }
+
+      for (let i = anchors.length - 1; i >= 0; i--) {
+        const top = anchors[i].getBoundingClientRect().top + window.scrollY
+        if (top <= threshold && tocIds.has(anchors[i].id)) {
+          return anchors[i].id
+        }
+      }
+      return anchors.find(anchor => tocIds.has(anchor.id))?.id || ''
+    }
+
+    function updateTOC({ toc, anchors, links, scrollOffset, collapseInactive }) {
+      const activeId = getActiveAnchorId(anchors, scrollOffset)
+      if (!activeId) return
+
+      links.forEach(link => {
+        const isActive = link.getAttribute('href') === `#${activeId}`
+        link.classList.toggle(ACTIVE_CLASS, isActive)
+
+        if (collapseInactive) {
+          const ul = link.closest('li')?.querySelector('ul')
+          if (ul) ul.style.display = isActive ? '' : 'none'
+        }
+      })
+
+      if (collapseInactive) {
+        const activeLink = toc.querySelector(`a[href="#${CSS.escape(activeId)}"]`)
+        let el = activeLink
+        while (el && el !== toc) {
+          if (el.tagName === 'UL') el.style.display = ''
+          if (el.tagName === 'LI') el.querySelector('ul')?.style.setProperty('display', '')
+          el = el.parentElement
+        }
+      }
+    }
+
+    function initTOC() {
+      const toc = document.querySelector(TOC_SELECTOR)
+      if (!toc) return
+
+      const collapseInactive = false
+      const anchors = [...document.querySelectorAll(ANCHOR_SELECTOR)]
+      const links = [...toc.querySelectorAll(TOC_LINK_SELECTOR)]
+
+      if (collapseInactive) {
+        toc.querySelectorAll(NESTED_LIST_SELECTOR).forEach(ul => ul.style.display = 'none')
+      }
+
+      links.forEach(link => {
+        link.addEventListener('click', () => {
+          isJumpingToAnchor = true
+        })
+      })
+
+      const config = {
+        toc,
+        anchors,
+        links,
+        scrollOffset: SCROLL_OFFSET_RATIO,
+        collapseInactive
+      }
+
+      window.addEventListener('scroll', () => updateTOC(config), { passive: true })
+      window.addEventListener('hashchange', () => updateTOC(config), { passive: true })
+
+      updateTOC(config)
+    }
+
+    document.readyState === 'loading'
+      ? document.addEventListener('DOMContentLoaded', initTOC)
+      : initTOC()
+  })()
+</script>
 
 
           </div>

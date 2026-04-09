@@ -1,0 +1,62 @@
+<div
+  id="mobile-sticky-progress"
+  style="
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10001;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 15px;
+    overflow: hidden;
+    text-align: center;
+  "
+>
+  <span
+    id="current-section-text"
+    style="
+      font-size: 0.85rem;
+      font-weight: 700;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      display: inline-block;
+      width: 100%;
+    "
+  ></span>
+</div>
+
+<script>
+  (function () {
+    const updateTitle = () => {
+      const toc = document.querySelector("#TableOfContents");
+      const bar = document.getElementById("mobile-sticky-progress");
+      const text = document.getElementById("current-section-text");
+
+      if (!toc || !bar || !text) return;
+
+      const activeLink = toc.querySelector("a.active");
+      // [핵심] 스크롤 위치가 500px 이상일 때만 표시
+      const isScrolled = window.scrollY > 700;
+      const isMobile = window.innerWidth < 1025;
+
+      if (activeLink && isScrolled && isMobile) {
+        text.innerText = activeLink.innerText;
+        bar.style.display = "block";
+      } else {
+        bar.style.display = "none";
+      }
+    };
+
+    // 스크롤 시 실행
+    window.addEventListener("scroll", () => {
+      window.requestAnimationFrame(updateTitle);
+    });
+
+    // 페이지 로드 시 및 창 크기 변경 시 실행
+    window.addEventListener("load", updateTitle);
+    window.addEventListener("resize", updateTitle);
+  })();
+</script>

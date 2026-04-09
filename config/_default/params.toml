@@ -22,6 +22,7 @@ verification = { }
 rssnext = { }
 advertisement = { }
 customCSS = ["css/custom.css"]
+smartTOC = true
 
 [header]
 layout = "basic"
