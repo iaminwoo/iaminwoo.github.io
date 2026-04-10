@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Drafts on Deep Dive Blog : Reinventing The Wheel</title>
+    <link>http://localhost:1313/drafts/</link>
+    <description>Recent content in Drafts on Deep Dive Blog : Reinventing The Wheel</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-kr</language>
+    <copyright>© 2026 황인우</copyright>
+    <lastBuildDate>Sat, 04 Apr 2026 10:23:51 +0900</lastBuildDate><atom:link href="http://localhost:1313/drafts/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Tree 구조들</title>
+      <link>http://localhost:1313/drafts/2026-04-04-1023/</link>
+      <pubDate>Sat, 04 Apr 2026 10:23:51 +0900</pubDate>
+      
+      <guid>http://localhost:1313/drafts/2026-04-04-1023/</guid>
+      <description>요약</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/drafts/2026-04-04-1023/featured.png" />
+    </item>
+    
+    <item>
+      <title>게시물 아이디어</title>
+      <link>http://localhost:1313/drafts/%EA%B2%8C%EC%8B%9C%EB%AC%BC-%EC%95%84%EC%9D%B4%EB%94%94%EC%96%B4/</link>
+      <pubDate>Wed, 01 Apr 2026 09:14:33 +0900</pubDate>
+      
+      <guid>http://localhost:1313/drafts/%EA%B2%8C%EC%8B%9C%EB%AC%BC-%EC%95%84%EC%9D%B4%EB%94%94%EC%96%B4/</guid>
+      <description></description>
+      
+    </item>
+    
+  </channel>
+</rss>

@@ -101,8 +101,8 @@
   <link
     type="text/css"
     rel="stylesheet"
-    href="/css/main.bundle.min.723d440dbb4e34e932324574f8c7af25ad3904cb2e39fc4fc708aa24425ce43859693989ff4c63b4f7e801a8bb3f8e9dd1ecd8ebf92c0cb328a59a24e7c85133.css"
-    integrity="sha512-cj1EDbtONOkyMkV0&#43;MevJa05BMsuOfxPxwiqJEJc5DhZaTmJ/0xjtPfoAai7P46d0ezY6/ksDLMopZok58hRMw==">
+    href="/css/main.bundle.min.7ca87dd702e5c097b6e58e37eeb533cd6fb24d208acd7d5c13e0a9dcbadc90b1a6a37aec2f341c1bf65f0a4cf4b5edd5f36b238a0a1453060a3c3934db3844b6.css"
+    integrity="sha512-fKh91wLlwJe25Y437rUzzW&#43;yTSCKzX1cE&#43;Cp3LrckLGmo3rsLzQcG/ZfCkz0te3V82sjigoUUwYKPDk02zhEtg==">
 
   
   
@@ -246,24 +246,30 @@
     top: 0;
     left: 0;
     right: 0;
-    z-index: 9999;
-    background: #1c1917;
-    color: white;
-    padding: 8px;
+    z-index: 10001;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 15px;
+    overflow: hidden;
     text-align: center;
-    border-bottom: 1px solid #333;
   "
 >
   <span
     id="current-section-text"
-    style="font-size: 0.85rem; font-weight: bold; color: white !important"
+    style="
+      font-size: 0.85rem;
+      font-weight: 700;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      display: inline-block;
+      width: 100%;
+    "
   ></span>
 </div>
 
 <script>
   (function () {
-    console.log("🚀 최종 모바일 헤더 로직 가동"); 
-
     const updateTitle = () => {
       const toc = document.querySelector("#TableOfContents");
       const bar = document.getElementById("mobile-sticky-progress");
@@ -273,7 +279,7 @@
 
       const activeLink = toc.querySelector("a.active");
       
-      const isScrolled = window.scrollY > 500;
+      const isScrolled = window.scrollY > 700;
       const isMobile = window.innerWidth < 1025;
 
       if (activeLink && isScrolled && isMobile) {
@@ -292,9 +298,6 @@
     
     window.addEventListener("load", updateTitle);
     window.addEventListener("resize", updateTitle);
-
-    
-    setInterval(updateTitle, 1000);
   })();
 </script>
 
@@ -828,7 +831,7 @@
     </div>
     
       <div class="article-link__summary prose dark:prose-invert max-w-fit mt-1 line-clamp-3">
-        게시물 요약
+        이진 탐색 트리의 기본 원리 이해, 재귀와 반복문
       </div>
     
   </div>

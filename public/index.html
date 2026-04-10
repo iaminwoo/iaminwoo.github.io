@@ -105,8 +105,8 @@
   <link
     type="text/css"
     rel="stylesheet"
-    href="/css/main.bundle.min.723d440dbb4e34e932324574f8c7af25ad3904cb2e39fc4fc708aa24425ce43859693989ff4c63b4f7e801a8bb3f8e9dd1ecd8ebf92c0cb328a59a24e7c85133.css"
-    integrity="sha512-cj1EDbtONOkyMkV0&#43;MevJa05BMsuOfxPxwiqJEJc5DhZaTmJ/0xjtPfoAai7P46d0ezY6/ksDLMopZok58hRMw==">
+    href="/css/main.bundle.min.7ca87dd702e5c097b6e58e37eeb533cd6fb24d208acd7d5c13e0a9dcbadc90b1a6a37aec2f341c1bf65f0a4cf4b5edd5f36b238a0a1453060a3c3934db3844b6.css"
+    integrity="sha512-fKh91wLlwJe25Y437rUzzW&#43;yTSCKzX1cE&#43;Cp3LrckLGmo3rsLzQcG/ZfCkz0te3V82sjigoUUwYKPDk02zhEtg==">
 
   
   
@@ -240,24 +240,30 @@
     top: 0;
     left: 0;
     right: 0;
-    z-index: 9999;
-    background: #1c1917;
-    color: white;
-    padding: 8px;
+    z-index: 10001;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 15px;
+    overflow: hidden;
     text-align: center;
-    border-bottom: 1px solid #333;
   "
 >
   <span
     id="current-section-text"
-    style="font-size: 0.85rem; font-weight: bold; color: white !important"
+    style="
+      font-size: 0.85rem;
+      font-weight: 700;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      display: inline-block;
+      width: 100%;
+    "
   ></span>
 </div>
 
 <script>
   (function () {
-    console.log("🚀 최종 모바일 헤더 로직 가동"); 
-
     const updateTitle = () => {
       const toc = document.querySelector("#TableOfContents");
       const bar = document.getElementById("mobile-sticky-progress");
@@ -267,7 +273,7 @@
 
       const activeLink = toc.querySelector("a.active");
       
-      const isScrolled = window.scrollY > 500;
+      const isScrolled = window.scrollY > 700;
       const isMobile = window.innerWidth < 1025;
 
       if (activeLink && isScrolled && isMobile) {
@@ -286,9 +292,6 @@
     
     window.addEventListener("load", updateTitle);
     window.addEventListener("resize", updateTitle);
-
-    
-    setInterval(updateTitle, 1000);
   })();
 </script>
 
@@ -713,6 +716,181 @@
   
     <div class="flex-none relative overflow-hidden  thumbnail">
       <img
+        src="/posts/2026-04-10-1411/featured_hu_4781cf9091fd09c1.png"
+        role="presentation"
+        loading="lazy"
+        decoding="async"
+        class="not-prose absolute inset-0 w-full h-full object-cover">
+    </div>
+  
+  <div class=" p-4">
+    <header class="items-center text-start text-xl font-semibold">
+      <a
+        
+          href="/posts/2026-04-10-1411/"
+        
+        class="not-prose before:absolute before:inset-0 decoration-primary-500 dark:text-neutral text-xl font-bold text-neutral-800 hover:underline hover:underline-offset-2">
+        <h2>
+          AVL 트리 구현 연습
+          
+        </h2>
+      </a>
+      
+        <div class="ms-2"><span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    초안
+  </span>
+</span>
+</div>
+      
+      
+    </header>
+    <div class="text-sm text-neutral-500 dark:text-neutral-400">
+      
+
+
+
+
+
+
+
+  
+
+  
+  
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  <div class="flex flex-row flex-wrap items-center">
+    
+    
+      <time datetime="2026-04-10T14:11:37&#43;09:00">2026년 4월 10일</time><span class="px-2 text-primary-500">&middot;</span><span title="읽는 시간">5 분</span>
+    
+
+    
+    
+  </div>
+
+  
+
+  
+  
+    <div class="flex flex-row flex-wrap items-center">
+      
+        
+      
+        
+          
+        
+      
+        
+      
+        
+          
+        
+      
+    </div>
+  
+
+  
+  
+
+
+
+    </div>
+    
+      <div class="article-link__summary prose dark:prose-invert max-w-fit mt-1 line-clamp-3">
+        게시물 요약
+      </div>
+    
+  </div>
+  <div class="px-6 pt-4 pb-2"></div>
+</article>
+
+  
+    
+
+
+
+
+
+
+
+
+  
+  
+  
+
+
+
+
+
+
+
+
+  
+  
+    
+
+    
+    
+      
+      
+        
+      
+        
+      
+        
+      
+    
+
+    
+    
+
+    
+    
+      
+        
+        
+          
+        
+      
+    
+  
+
+
+
+<article class="article-link--simple flex flex-col md:flex-row relative overflow-hidden rounded-lg border border-neutral-300 dark:border-neutral-600">
+  
+    <div class="flex-none relative overflow-hidden  thumbnail">
+      <img
         src="/posts/2026-04-05-2021/featured_hu_73c07dddb9012d1d.png"
         role="presentation"
         loading="lazy"
@@ -848,204 +1026,7 @@
     </div>
     
       <div class="article-link__summary prose dark:prose-invert max-w-fit mt-1 line-clamp-3">
-        게시물 요약
-      </div>
-    
-  </div>
-  <div class="px-6 pt-4 pb-2"></div>
-</article>
-
-  
-    
-
-
-
-
-
-
-
-
-  
-  
-  
-
-
-
-
-
-
-
-
-  
-  
-    
-
-    
-    
-      
-      
-        
-      
-        
-      
-        
-      
-    
-
-    
-    
-
-    
-    
-      
-        
-        
-          
-        
-      
-    
-  
-
-
-
-<article class="article-link--simple flex flex-col md:flex-row relative overflow-hidden rounded-lg border border-neutral-300 dark:border-neutral-600">
-  
-    <div class="flex-none relative overflow-hidden  thumbnail">
-      <img
-        src="/posts/2026-04-04-1023/featured_hu_73c07dddb9012d1d.png"
-        role="presentation"
-        loading="lazy"
-        decoding="async"
-        class="not-prose absolute inset-0 w-full h-full object-cover">
-    </div>
-  
-  <div class=" p-4">
-    <header class="items-center text-start text-xl font-semibold">
-      <a
-        
-          href="/posts/2026-04-04-1023/"
-        
-        class="not-prose before:absolute before:inset-0 decoration-primary-500 dark:text-neutral text-xl font-bold text-neutral-800 hover:underline hover:underline-offset-2">
-        <h2>
-          Tree 구조들
-          
-        </h2>
-      </a>
-      
-        <div class="ms-2"><span class="flex cursor-pointer">
-  <span
-    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
-    초안
-  </span>
-</span>
-</div>
-      
-      
-    </header>
-    <div class="text-sm text-neutral-500 dark:text-neutral-400">
-      
-
-
-
-
-
-
-
-  
-
-  
-  
-  
-    
-  
-
-  
-
-  
-    
-  
-
-  
-
-  
-
-  
-    
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-
-  <div class="flex flex-row flex-wrap items-center">
-    
-    
-      <time datetime="2026-04-04T10:23:51&#43;09:00">2026년 4월 4일</time><span class="px-2 text-primary-500">&middot;</span><span title="읽는 시간">6 분</span>
-    
-
-    
-    
-  </div>
-
-  
-
-  
-  
-    <div class="flex flex-row flex-wrap items-center">
-      
-        
-      
-        
-          
-        
-      
-        
-      
-        
-          
-            
-              <a class="relative mt-[0.5rem] me-2" href="/tags/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0/">
-                <span class="flex cursor-pointer">
-  <span
-    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
-    자료구조
-  </span>
-</span>
-
-              </a>
-            
-              <a class="relative mt-[0.5rem] me-2" href="/tags/java/">
-                <span class="flex cursor-pointer">
-  <span
-    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
-    Java
-  </span>
-</span>
-
-              </a>
-            
-          
-        
-      
-    </div>
-  
-
-  
-  
-
-
-
-    </div>
-    
-      <div class="article-link__summary prose dark:prose-invert max-w-fit mt-1 line-clamp-3">
-        요약
+        이진 탐색 트리의 기본 원리 이해, 재귀와 반복문
       </div>
     
   </div>
@@ -1469,12 +1450,14 @@
 
     
     
-      
-      
-    
 
     
     
+      
+        
+        
+          
+        
       
     
   
@@ -1483,26 +1466,27 @@
 
 <article class="article-link--simple flex flex-col md:flex-row relative overflow-hidden rounded-lg border border-neutral-300 dark:border-neutral-600">
   
+    <div class="flex-none relative overflow-hidden  thumbnail">
+      <img
+        src="/posts/2026-03-31-2035/featured_hu_73c07dddb9012d1d.png"
+        role="presentation"
+        loading="lazy"
+        decoding="async"
+        class="not-prose absolute inset-0 w-full h-full object-cover">
+    </div>
+  
   <div class=" p-4">
     <header class="items-center text-start text-xl font-semibold">
       <a
         
-          href="/posts/%EA%B2%8C%EC%8B%9C%EB%AC%BC-%EC%95%84%EC%9D%B4%EB%94%94%EC%96%B4/"
+          href="/posts/2026-03-31-2035/"
         
         class="not-prose before:absolute before:inset-0 decoration-primary-500 dark:text-neutral text-xl font-bold text-neutral-800 hover:underline hover:underline-offset-2">
         <h2>
-          게시물 아이디어
+          개인 기술 블로그 시작!
           
         </h2>
       </a>
-      
-        <div class="ms-2"><span class="flex cursor-pointer">
-  <span
-    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
-    초안
-  </span>
-</span>
-</div>
       
       
     </header>
@@ -1551,7 +1535,7 @@
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2026-04-01T09:14:33&#43;09:00">2026년 4월 1일</time><span class="px-2 text-primary-500">&middot;</span><span title="읽는 시간">2 분</span>
+      <time datetime="2026-03-31T20:35:36&#43;09:00">2026년 3월 31일</time><span class="px-2 text-primary-500">&middot;</span><span title="읽는 시간">3 분</span>
     
 
     
@@ -1574,6 +1558,38 @@
       
         
           
+            
+              <a class="relative mt-[0.5rem] me-2" href="/tags/hugo/">
+                <span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    Hugo
+  </span>
+</span>
+
+              </a>
+            
+              <a class="relative mt-[0.5rem] me-2" href="/tags/blowfish/">
+                <span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    Blowfish
+  </span>
+</span>
+
+              </a>
+            
+              <a class="relative mt-[0.5rem] me-2" href="/tags/github-pages/">
+                <span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    Github Pages
+  </span>
+</span>
+
+              </a>
+            
+          
         
       
     </div>
@@ -1587,7 +1603,7 @@
     </div>
     
       <div class="article-link__summary prose dark:prose-invert max-w-fit mt-1 line-clamp-3">
-        
+        그동안 블로그를 하지 않았던 이유, Hugo 트러블슈팅 및 느낀점
       </div>
     
   </div>

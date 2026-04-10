@@ -97,3 +97,39 @@ p code {
 .dark #current-section-text {
   color: #ffffff !important;
 }
+
+.chroma .p,
+.chroma .o,
+.chroma .c1 {
+  color: #ffffff !important;
+}
+.chroma .c1 {
+  opacity: 0.9;
+}
+
+.chroma .k {
+  color: #ff714d !important;
+  font-weight: bold;
+}
+
+.chroma .n {
+  color: #dcb67a !important;
+}
+
+.chroma .nf {
+  color: #ff8c42 !important;
+}
+
+.chroma .na {
+  color: #e29383 !important;
+}
+
+.chroma .s,
+.chroma .nd {
+  color: #ffd8b1 !important;
+}
+
+.chroma .m,
+.chroma .kc {
+  color: #ffb3a7 !important;
+}
