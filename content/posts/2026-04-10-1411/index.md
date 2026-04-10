@@ -1,8 +1,8 @@
 +++
 date = '2026-04-10T14:11:37+09:00'
 draft = false
-title = 'AVL 트리 구현 연습'
-summary = 'AVL 트리의 원리를 살펴보고 실제로 구현해보며 BST 와 성능 측정'
+title = 'AVL 트리 직접 구현 과정'
+summary = 'AVL 트리의 원리와 실제 구현, BST 와 성능 비교 측정'
 tags = ['과정', '자료구조', 'Java']
 +++
 
