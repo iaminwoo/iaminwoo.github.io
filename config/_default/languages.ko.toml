@@ -11,10 +11,16 @@ title = "Deep Dive Blog : Reinventing The Wheel"        # 블로그 제목
   dateFormat = "2006년 1월 2일" # 한국식 날짜 표기 (YYYY년 M월 D일)
 
   [params.author]
-    name = "황인우" # 본인 이름
-    image = "img/author.jpg" # 프로필 사진 경로
-    headline = "집착하는 개발자 황인우입니다"
-    bio = "안녕하세요. 문제 해결에 진심인 백엔드 개발자 황인우입니다."
+    name = "황인우"
+    image = "img/author.jpg"
+    headline = """
+집착하는 개발자 황인우입니다.
+E-MAIL : dlsdn1108@gmail.com
+"""
+    bio = """
+안녕하세요. 문제 해결에 진심인 백엔드 개발자 황인우입니다.
+E-MAIL : dlsdn1108@gmail.com
+"""
     links = [
       { github = "https://github.com/iaminwoo" }
     ]
